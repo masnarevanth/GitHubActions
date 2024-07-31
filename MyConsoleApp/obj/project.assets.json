@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/masnasairevanth/Downloads/Dotnet/MyConsoleApp/MyConsoleApp.csproj",
+      "projectUniqueName": "/Users/masnasairevanth/Downloads/GitHubActions/MyConsoleApp/MyConsoleApp.csproj",
       "projectName": "MyConsoleApp",
-      "projectPath": "/Users/masnasairevanth/Downloads/Dotnet/MyConsoleApp/MyConsoleApp.csproj",
+      "projectPath": "/Users/masnasairevanth/Downloads/GitHubActions/MyConsoleApp/MyConsoleApp.csproj",
       "packagesPath": "/Users/masnasairevanth/.nuget/packages/",
-      "outputPath": "/Users/masnasairevanth/Downloads/Dotnet/MyConsoleApp/obj/",
+      "outputPath": "/Users/masnasairevanth/Downloads/GitHubActions/MyConsoleApp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/masnasairevanth/.nuget/NuGet/NuGet.Config"

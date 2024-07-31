@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MyConsoleApp
-build_property.ProjectDir = /Users/masnasairevanth/Downloads/Dotnet/MyConsoleApp/
+build_property.ProjectDir = /Users/masnasairevanth/Downloads/GitHubActions/MyConsoleApp/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

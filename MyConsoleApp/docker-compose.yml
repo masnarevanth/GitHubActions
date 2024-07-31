@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  myconsoleapp:
+    image: ${DOCKER_REGISTRY-}myconsoleapp
+    build:
+      context: .
+      dockerfile: ./Dockerfile
