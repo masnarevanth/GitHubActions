@@ -5,6 +5,7 @@ WORKDIR /app
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0-preview AS build
 WORKDIR /src
+RUN ls -la  # List the contents to debug
 COPY ["MyConsoleApp.csproj", "."]
 RUN dotnet restore "./MyConsoleApp.csproj"
 COPY . .
