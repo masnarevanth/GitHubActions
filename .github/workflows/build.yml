@@ -30,10 +30,8 @@ jobs:
       - name: Build and tag Docker image
         run: |
           docker build -t myconsoleapp:latest .
-          docker tag myconsoleapp:latest ${{ steps.ecr-login.outputs.registry }}/myconsoleapp:latest
-          #docker tag myconsoleapp:latest ${{ steps.ecr-login.outputs.registry }}/myconsoleapp:${{ github.sha }}
+          docker tag myconsoleapp:latest ${{ steps.ecr-login.outputs.registry }}/myrepo:latest
 
       - name: Push Docker image to ECR
         run: |
-          docker push ${{ steps.ecr-login.outputs.registry }}/myconsoleapp:latest
-          #docker push ${{ steps.ecr-login.outputs.registry }}/myconsoleapp:${{ github.sha }}
+          docker push ${{ steps.ecr-login.outputs.registry }}/myrepo:latest
