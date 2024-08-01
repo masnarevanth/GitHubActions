@@ -7,13 +7,13 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0-preview AS build
 WORKDIR /src
 
 # Copy the .csproj file and restore dependencies
-COPY ["MyConsoleApp.csproj", "."]
-RUN dotnet restore "./MyConsoleApp.csproj"
+COPY ["MyConsoleApp.csproj", "./"]
+RUN ls -la  # List the contents of /src to verify the .csproj file is copied
+RUN dotnet restore "MyConsoleApp.csproj"
 
 # Copy the remaining source code and build the application
 COPY . .
-WORKDIR "/src"
-RUN ls -la  # List the contents to debug
+RUN ls -la  # List the contents of /src to ensure all files are present
 RUN dotnet build "MyConsoleApp.csproj" -c Release -o /app/build
 
 # Publish the application
