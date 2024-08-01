@@ -5,10 +5,10 @@ WORKDIR /app
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0-preview AS build
 WORKDIR /src
-COPY ["MyConsoleApp.csproj", "."]
-RUN dotnet restore "./MyConsoleApp.csproj"
+COPY ["MyConsoleApp/MyConsoleApp.csproj", "MyConsoleApp/"]
+RUN dotnet restore "MyConsoleApp/MyConsoleApp.csproj"
 COPY . .
-WORKDIR "/src/"
+WORKDIR "/src/MyConsoleApp"
 RUN dotnet build "MyConsoleApp.csproj" -c Release -o /app/build
 
 FROM build AS publish
