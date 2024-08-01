@@ -8,11 +8,12 @@ WORKDIR /src
 COPY ["MyConsoleApp.csproj", "."]
 RUN dotnet restore "./MyConsoleApp.csproj"
 COPY . .
-WORKDIR "/src/."
+WORKDIR "/src/"
 RUN dotnet build "MyConsoleApp.csproj" -c Release -o /app/build
 
 FROM build AS publish
 RUN dotnet publish "MyConsoleApp.csproj" -c Release -o /app/publish
+
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
