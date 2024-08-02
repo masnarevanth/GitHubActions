@@ -30,7 +30,7 @@ jobs:
       - name: Build and tag Docker image
         run: |
           docker build -t myconsoleapp:latest .
-          IMAGE_TAG: ${{ steps.get-commit-hash.outputs.commit-hash }}-${{ steps.get-timesta
+          IMAGE_TAG: ${{ steps.get-commit-hash.outputs.commit-hash }}-${{ steps.get-timestamp.outputs.timestamp }}
       - name: Push Docker image to ECR
         run: |
           docker push ${{ steps.ecr-login.outputs.registry }}/myrepo:latest
